@@ -7,14 +7,14 @@ import { PasswordManagerService } from '../password-manager.service';
   styleUrls: ['./site-list.component.scss'],
 })
 export class SiteListComponent {
-  constructor(private passwordManager: PasswordManagerService) {
+  constructor(private passwordManagerService: PasswordManagerService) {
     this.loadSite();
   }
 
   onSubmit(values: object) {
     console.log(values);
 
-    this.passwordManager
+    this.passwordManagerService
       .addSite(values)
       .then(() => {
         console.log('Data saved successfully');
@@ -25,7 +25,7 @@ export class SiteListComponent {
   }
 
   loadSite() {
-    this.passwordManager.loadSite().subscribe((value) => {
+    this.passwordManagerService.loadSite().subscribe((value) => {
       console.log(value);
     });
   }
