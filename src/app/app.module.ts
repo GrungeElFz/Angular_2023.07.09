@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SiteListComponent } from './site-list/site-list.component';
 import { PasswordListComponent } from './password-list/password-list.component';
 import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     SiteListComponent,
     PasswordListComponent,
-    LoginComponent
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
