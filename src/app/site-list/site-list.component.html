@@ -6,7 +6,7 @@
       Please add a new site in the form below
     </p>
 
-    <form #f="ngForm">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
       <!-- Form: Site Name -->
       <div class="flex flex-col mb-4">
         <label class="text-lg font-medium mb-2">Site Name</label>
